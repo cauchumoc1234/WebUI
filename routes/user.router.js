@@ -1,0 +1,12 @@
+const express = require('express')
+const user_router = express.Router()
+const user_controller = require('../controllers/user.controller')
+var auth_middleware = require("../middleware/requireauth.middleware")
+user_router.get('/',auth_middleware.requireAuth,user_controller.show)
+user_router.get('/create',user_controller.create)
+user_router.post('/create',user_controller.postCreate)
+user_router.get('/login',user_controller.login)
+user_router.post('/login',user_controller.postLogin)
+user_router.get('/logout',user_controller.logout)
+user_router.get('/profile',user_controller.showProfile)
+module.exports = user_router;
