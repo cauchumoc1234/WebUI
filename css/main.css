@@ -134,6 +134,9 @@
     margin-top: 5%;
     background-color: #6acd96;
 }
+.middle-description button:hover{
+    background-color: #20836d;
+}
 .content-bottom{
     display: flex;
     align-items: center;
@@ -167,6 +170,9 @@
     margin-top: 5%;
     background-color: #6acd96;
 }
+.bottom-left button:hover{
+    background-color: #20836d;
+}
 .bottom-right button{
     border: none;
     outline: none;
@@ -175,6 +181,9 @@
     margin-top: 5%;
     background-color: #6acd96;
     margin-bottom: 10px;
+}
+.bottom-right button:hover{
+    background-color: #20836d;
 }
 .excersise{
     background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1076/gettyimages-morningrun-1515515761.jpg');
@@ -253,6 +262,10 @@
     border-radius: 20px;
     font-weight: bolder;
     color: #fff;
+}
+.inner-ad button:hover{
+    cursor: pointer;
+    background-color: #20836d;
 }
 .new-products{
     text-align: center;
