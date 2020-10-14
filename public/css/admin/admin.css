@@ -1,0 +1,51 @@
+form{
+    margin-bottom: 20px;
+}
+.checklist {
+    width: 200px;
+    font-size: 0.8em;
+}
+
+.checklist input {
+    width: 10%;
+    margin: 0;
+}
+#clothing-type{
+    width: 100%;
+    flex-direction: column;
+}
+#clothing-type div{
+    width: 100%;
+}
+#clothing-type input{
+    width: 10%;
+}
+.checklist div {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.amount div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.amount div input {
+    width: 150px;
+    margin-bottom: 5px;
+    margin-top:0;
+}
+#brand{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}
+#brand option{
+    margin-top: 5px;
+}
+small{
+    max-width: 20px;
+    color: green;
+}

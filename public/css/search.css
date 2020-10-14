@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+}
+.pagnition{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+.page-number{
+    background-color: rgb(245, 245, 245);
+    min-width: 60px;
+    transition: background-color 0.3s;
+}
+.page-number:hover{
+    background-color: rgb(190, 226, 240);
+}
+.link{
+    color: rgb(89, 139, 139);
+    padding: 8px 0;
+}
+#current{
+    background-color: rgb(129, 241, 241);
+}
+#sort{
+    float: right;
+    margin-bottom: 30px;
+    padding: 5px;
+    font-size: 15px;
+}
+#sort option:hover{
+    color:red;
+}

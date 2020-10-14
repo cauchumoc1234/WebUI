@@ -1,0 +1,225 @@
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+}
+@font-face {
+    font-family: fonttop;
+    src: url("../font/UTM BanqueB.ttf");
+}
+.header{
+    position: fixed;
+    margin-bottom: 20px;
+    position: fixed;
+}
+.top{
+    display: inline-flex;
+    height: 80px;
+    /* background-color:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgb(253, 253, 253) 0%, rgb(19, 19, 19) 100%);
+    padding-bottom: 30px;
+}
+.top .logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.row-menu{
+    width: 100%;
+    height: 60px;
+    background: rgb(19, 19, 19);
+    text-align: center;
+}
+.row-menu .option{
+    
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.row-menu .option:hover{
+    background-color: #292929;
+}
+.option a{
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes fadeIn {
+    0% {  opacity: 0;}
+    100% {  opacity: 1;}
+}
+.drop{
+    position: relative;
+    
+}
+.drop:hover .drop-menu{
+    visibility: visible;
+    animation: fadeIn ease 0.6s;
+}
+.drop-menu{
+    position: absolute;
+    list-style-type: none;
+    visibility: hidden;
+    background-color: #000000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.drop-menu li{
+    height: 40px;
+}
+.drop-menu li:last-child:hover{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.drop-menu li:hover{
+    background-color: #242323;
+}
+.drop-item{
+    display: block;
+    width: 100%;
+    padding: 0;
+    height: 40px;
+}
+.option a,.drop-item{
+    text-transform: uppercase;
+    color: #faf5f5;
+}
+.option a:hover,.drop-item:hover{
+    color: rgb(233, 229, 229);
+}
+.footer {
+    display: flex;
+    background-color: #000102;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+
+}
+.footer a{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: rgb(164, 165, 164);
+}
+.footer a:hover{
+    color: honeydew;
+}
+.footer .general a:first-child{
+    font-size: 20px;
+    font-weight: bolder;
+    color: honeydew;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+}
+.social a{
+    flex-grow: 1;
+    font-size: 30px;
+    color: honeydew;
+}
+.search-box{
+    display: flex;
+    text-align: right;
+    align-items: center;
+    box-sizing: content-box;
+    margin-top: 18px;
+}
+.search-box input{
+    font-size: 18px;
+    width: 80%;
+    padding: 10px 8px 10px 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    outline: none;
+    border: 1px solid rgb(0, 0, 0);
+    transition: border-color 0.3s;
+}
+.search-box input:focus{
+    border-color: #e67e70;
+}
+.search-box button{
+    font-size: 27px;
+    outline: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none; 
+    padding: 5px 10px 7px 6px;
+    transition: background-color 0.1s;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.search-box button:hover{
+    background-color: rgb(170, 110, 76);
+}
+.customer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.customer a{
+    font-family: fonttop;
+    color: rgb(77, 76, 76);
+    transition: color 0.3s;
+    font-size: 20px;
+}
+.customer a:hover{
+    color: grey;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.body{
+    display: flex;
+    min-height: 70vh;
+    margin-top: 250px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.cart{
+    font-size: 30px;
+    padding: 10px;
+    background-color: #f3a572;
+    color: aliceblue;
+    transition: background-color 0.2s;
+    border-radius: 15px;
+}
+.cart:hover{
+    background-color: #aa724d;
+}
