@@ -1,0 +1,66 @@
+extends ../general
+block css
+  link(rel="stylesheet", href="/css/home.css")
+  link(rel="stylesheet", href="/css/search.css")
+block content
+    .body
+        .col-2.col-sm-12
+        .col-10.col-sm-12
+            if find
+                h1 Result for "#{find}"
+            select(name="option" id="sort")
+                option(value="normal") Normal
+                option(value="price-asc") Price low to high
+                option(value="price-desc") Price high to low
+                option(value="date-asc") Newest
+                option(value="date-desc") Oldest
+            if products
+                .list
+                    each product in products
+                        a.item(href="/product/"+product.type[0]+"/"+product._id)
+                            img(src= product.avatar, alt='Product', style='width: 100%;')
+                            .info
+                            h4 #{product.productname}
+                            if product.type[1]
+                                p.type  #{product.type[1]}
+                            else
+                                p.type #{product.type[0]}
+                            span.price #{product.price}
+                ul.pagnition
+                    if current_page > 1 && max_page >= 5
+                        li.page-number
+                                a.pre.link(href=url ) &#8592;
+                    if max_page >= 5
+                        if current_page > 2
+                            - for(var i= current_page -2 ; i < current_page + 3; i++)
+                                if i <= max_page
+                                    if i == current_page
+                                        li.page-number#current
+                                            a.link(href=url)= i
+                                    else
+                                        li.page-number
+                                            a.link(href=url)= i
+                        else
+                            - for(var i= current_page ; i < current_page + 5; i++)
+                                if i <= max_page
+                                    if i == current_page
+                                        li.page-number#current
+                                            a.link(href=url)= i
+                                    else
+                                        li.page-number
+                                            a.link(href=url)= i
+                    else 
+                        -for(var i = current_page ; i <= max_page ; i++)
+                                if i == current_page
+                                    li.page-number#current
+                                        a.link(href=url)= i
+                                else
+                                    li.page-number
+                                        a.link(href=url)= i
+                    if current_page +2 < max_page
+                        li.page-number
+                                a.next.link(href=url ) &#8594;
+block script
+  script(src="/script/product/price_format2.js")
+  script(src="/script/search/pagnition.js")
+  script(src="/script/search/sort.js")

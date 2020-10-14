@@ -1,0 +1,117 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet', href='/css/general.css')
+  link(rel='stylesheet', href='/css/lib.css')
+  
+  block css
+  title Phoenix
+.header
+  .top
+    a.logo.col-4.col-sm-12(href='/')
+      img(src='/image/Logo_head.png', alt='brand')
+    form.col-4.col-sm-12.search-box(action='/search' method="get")
+      input(type='text',name="q", placeholder='Find something...')
+      button
+        i.fa.fa-search(aria-hidden='true')
+    .col-3.col-sm-12.customer
+      a(href="/user/login") Login
+      span &nbsp &nbsp
+      a(href="/user/create") Sign up
+  .row-menu
+        .option.drop
+          a(href="/search?main_type=shoe") Shoe
+          ul.drop-menu
+            li
+              a.drop-item(href="/search?main_type=shoe&q=football") Football
+            li
+              a.drop-item(href="/search?main_type=shoe&q=running") Running
+            li
+              a.drop-item(href="/search?main_type=shoe&q=") Basketball
+            li
+              a.drop-item(href="/search?main_type=shoe&q=") Training
+        .option.drop
+          a(href="/search?main_type=clothing") Clothing
+          ul.drop-menu
+            li
+              a.drop-item(href="/search?main_type=clothing&q=") T-Shirts
+            li
+              a.drop-item(href="/search?main_type=clothing&q=") Shirts
+            li
+              a.drop-item(href="/search?main_type=clothing&q=") Sweaters
+            li
+              a.drop-item(href="/search?main_type=clothing&q=") Hoodies
+            li
+              a.drop-item(href="/search?main_type=clothing&q=") Shorts
+            li
+              a.drop-item(href="/search?main_type=clothing&q=") Jeans
+            li
+              a.drop-item(href="/search?main_type=clothing&q=") Jogges
+            li
+              a.drop-item(href="/search?main_type=clothing&q=") Trousers
+        .option.drop
+          a(href="/search?main_type=accessory") Accessories
+          ul.drop-menu
+            li
+              a.drop-item(href="/search?main_type=accessory&q=") Underwears
+            li
+              a.drop-item(href="/search?main_type=accessory&q=") Caps
+            li
+              a.drop-item(href="/search?main_type=accessory&q=") Socks
+            li
+              a.drop-item(href="/search?main_type=accessory&q=") Belts
+            li
+              a.drop-item(href="/search?main_type=accessory&q=") Wallets
+            li
+              a.drop-item(href="/search?main_type=accessory&q=") Face masks
+            li
+              a.drop-item(href="/search?main_type=accessory&q=") Bracelets
+        .option.drop
+          a(href="") Sports
+          ul.drop-menu
+            li
+              a.drop-item(href="/search?q=football") Football
+            li
+              a.drop-item(href="/search?q=running") Running
+            li
+              a.drop-item(href="/search?q=golf") Golf
+            li
+              a.drop-item(href="/search?q=basketball") Basketball
+            li
+              a.drop-item(href="/search?q=yoga") Yoga
+            li
+              a.drop-item(href="/search?q=tennis") Tennis
+        .option.drop
+          a(href="") SALE OFF !
+block content
+.footer
+  .col-3.general
+    a(href='#') FIND A STORE
+  .col-3.general
+    a(href='#') GET HELP
+    a(href='#') Order Status
+    a(href='#') Delivery
+    a(href='#') Returns
+    a(href='#') Payment Options
+    a(href='#') Contact Us
+  .col-3.general
+    a(href='#') ABOUT US
+    a(href='#') News
+    a(href='#') Careers
+    a(href='#') Investors
+  .col-3.social
+    a(href='')
+      i.fa.fa-twitter(aria-hidden='true')
+    a(href='#')
+      i.fa.fa-facebook-official(aria-hidden='true')
+    a(href='')
+      i.fa.fa-instagram(aria-hidden='true')
+      
+block script
+script.
+  if(document.cookie.search("id=") >= 0){
+  var x = document.getElementsByClassName("customer");
+  x[0].innerHTML = "<a style='margin-top:10px' href='/user/profile' class = 'badge badge-success mr-2'>Profile</a> <span></span><a style='margin-top:10px' href='/user/logout' class = 'badge badge-warning'>Logout</a><span> </span><a style='margin-left:20px;margin-top:10px' href='/cart' class = 'badge badge-success mr-2'><i class='fa fa-shopping-cart cart' '></i></a> ";
+  }

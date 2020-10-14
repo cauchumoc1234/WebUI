@@ -1,0 +1,41 @@
+extends ../general.pug
+block css
+    link(rel="stylesheet", href="/css/user/user_login.css")
+block content
+  .body
+    form.login(action='/user/create' , method="post")
+        div
+            label(for='username') Username
+            br
+            input#username(type='text',name="username", aria-describedby='usernameHelp', maxlength='20', minlength='6')
+            br
+            label(for='password') Password
+            br
+            input#password(type='password',name="password", aria-describedby='passwordHelp', pattern='.{6,20}')
+            br
+            small#passwordlHelp.form-text.text-muted Username &amp; Password must have 6-20 character
+            br
+            label(for='password') Confirm Password
+            br
+            input#cfpassword(type='password',name="cfpassword", aria-describedby='cfpasswordHelp', maxlength='20', minlength='6')
+            br
+            small#cfpasswordHelp 2 passwords must be the same
+            br
+            label(for='fullname') Fullname
+            br
+            input#fullname(type='text',name="fullname", maxlength='20', minlength='6')
+            br
+            label(for='password') Address
+            br
+            input#address(type='text',name="address")
+            br
+            label(for='phonenumber') Phonenumbers
+            br
+            input#phonenumber(type='text',name="phonenumber", maxlength='15', minlength='9')
+            br
+            button#create Create user
+            br
+            a(href='/user/login') Login
+block script
+    script(src="/script/check_pass.js")
+    script(src="/script/user/clear-history.js")

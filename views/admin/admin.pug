@@ -1,0 +1,173 @@
+extends ../general
+block css
+    link(rel="stylesheet", href="/css/user/user_login.css") 
+    link(rel="stylesheet", href="/css/admin/admin.css") 
+block content
+    .body
+        h1(style="text-align:center;") Admin
+        form.login(action="admin/add_product/shoes", method="post" id = "add_product")
+            div
+                label(for="name") Product name
+                br
+                input(type="text" name="name")
+                br
+                label(for="name") Link avatar
+                br
+                input(type="text" name="avtlink")
+                br
+                label(for="sale") Price
+                br
+                input(type="text" id="sale" name="price")
+                br
+                label(for="brand") Brand                         
+                br
+                select(name="brand" id="brand" size="5" multiple)
+                    option(value="Nike") Nike
+                    option(value="Adidas") Adidas
+                    option(value="Bitis Biti's") Biti's
+                    option(value="Vietnam") Vietnam
+                small Press Ctrl to choose multiple brands
+                br
+                label(for="name") Type
+                br
+                .checklist
+                    div
+                        label Shoe
+                        input( type="radio" value="shoe" id="first_type" name="main_type" class="main-type")
+                    div
+                        label Clothing
+                        input( type="radio" value="clothing" name="main_type" class="main-type")
+                    #clothing-type(style="display:none;")
+                        div
+                            label Top
+                            input( type="checkbox" value="top" name="type")
+                        div
+                            label T-Shirt
+                            input( type="checkbox" value="t-shirt" name="type")
+                        div
+                            label Hoodies
+                            input( type="checkbox" value="hoodies" name="type")  
+                        div
+                            label Jacket
+                            input( type="checkbox" value="jacket" name="type")     
+                        div
+                            label Shorts
+                            input( type="checkbox" value="shorts" name="type") 
+                        div
+                            label Trouser
+                            input( type="checkbox" value="trouser" name="type")  
+                        div
+                            label Caps
+                            input( type="checkbox" value="caps" name="type")
+                        div
+                            label Socks
+                            input( type="checkbox" value="socks" name="type")
+                        div
+                            label Bags
+                            input( type="checkbox" value="bags" name="type") 
+                    div
+                        label Tennis
+                        input( type="checkbox" value="tennis" name="type")
+                    div
+                        label Street
+                        input( type="checkbox" value="street" name="type")  
+                    div
+                        label Football
+                        input( type="checkbox" value="football" name="type")
+                    div
+                        label Running
+                        input( type="checkbox" value="running" name="type" )
+                    div
+                        label Basketball
+                        input( type="checkbox" value="basketball" name="type")
+                    div
+                        label Gym and Traning
+                        input( type="checkbox" value="gym" name="type")
+                    div
+                        label Golf
+                        input( type="checkbox" value="golf" name="type")  
+                    div
+                        label Yoga
+                        input( type="checkbox" value="yoga" name="type")              
+                .amount#shoes(style="display:none;")
+                    label(for="") Amount
+                    div
+                        label(for="") 35.5
+                        input(type="number" name = 'size' value=23 min = 0)
+                    div
+                        label(for="") 36
+                        input(type="number" name = 'size' value=11 min = 0)
+                    div
+                        label(for="") 36.5
+                        input(type="number" name = 'size' value=12 min = 0)
+                    div
+                        label(for="") 37
+                        input(type="number" name = 'size' value=14 min = 0)
+                    div
+                        label(for="") 37.5
+                        input(type="number" name = 'size' value=43 min = 0)
+                    div
+                        label(for="") 38
+                        input(type="number" name = 'size' value=23 min = 0)
+                    div
+                        label(for="") 38.5
+                        input(type="number" name = 'size' value=25 min = 0)
+                    div
+                        label(for="") 39
+                        input(type="number" name = 'size' value=35 min = 0)
+                    div
+                        label(for="") 39.5
+                        input(type="number" name = 'size' value=33 min = 0)
+                    div
+                        label(for="") 40
+                        input(type="number" name = 'size' value=54 min = 0)
+                    div
+                        label(for="") 40.5
+                        input(type="number" name = 'size' value=55 min = 0)
+                    div
+                        label(for="") 41.5
+                        input(type="number" name = 'size' value=56 min = 0)
+                    div
+                        label(for="") 41.5
+                        input(type="number" name = 'size' value=58 min = 0)
+                    div
+                        label(for="") 42
+                        input(type="number" name = 'size' value=59 min = 0)
+                    div
+                        label(for="") 42.5
+                        input(type="number" name = 'size' value=60 min = 0)
+                    div
+                        label(for="") 43
+                        input(type="number" name = 'size' value=61 min = 0)
+                    div
+                        label(for="") 43.5
+                        input(type="number" name = 'size' value=34 min = 0)
+                    div
+                        label(for="") 44
+                        input(type="number" name = 'size' value=23 min = 0)
+                    div
+                        label(for="") 44.5
+                        input(type="number" name = 'size' value=24 min = 0)
+                    div
+                        label(for="") 45
+                        input(type="number" name = 'size' value=25 min = 0)
+                br
+                .amount#clothing(style="display:none;")
+                    label(for="") Amount
+                    div
+                        label(for="") S
+                        input(type="number" name = 'size' value=23 min = 0)
+                    div
+                        label(for="") M
+                        input(type="number" name = 'size' value=11 min = 0)
+                    div
+                        label(for="") L
+                        input(type="number" name = 'size' value=12 min = 0)
+                    div
+                        label(for="") XL
+                        input(type="number" name = 'size' value=14 min = 0)
+                br
+                button Add
+block script
+    script(src="script/admin/price_format.js")
+    script(src="script/admin/main_type_choose.js")

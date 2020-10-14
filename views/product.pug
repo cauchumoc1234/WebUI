@@ -1,0 +1,29 @@
+extends general.pug
+block css
+    link(rel="stylesheet", href="/css/product.css")
+block content
+    .body
+        if product
+            .page
+                img(style="display:block;").col-sm-12(src= product.avatar, alt="Product")
+                .info.col-sm-12
+                    h1 #{product.productname}
+                    h3.price #{product.price}
+                    form(action="/product/add/"+product._id method="post")
+                        .size
+                            each val,key in product.inStock
+                                label.size-btn
+                                    input.choice(type="radio", name= "size",value= key)
+                                    span= key
+                                        span(class="instock",style="display:none;" , value= val)
+                        input#amount(type="number", name="amount" min=1 max=product.inStock["36"] step="1" value=1)
+                        .submit-btn
+                            button(type="button")#atc-btn Add to cart
+                                span(id="notify") Added to your cart
+                            button#buy-now Buy Now
+
+
+block script
+    script(src="/script/product/price_format2.js")
+    script(src="/script/product/choose_size.js")
+    script(src="/script/product/show_addtocart.js")

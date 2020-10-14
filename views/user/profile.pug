@@ -1,0 +1,7 @@
+extends ../general.pug
+block css
+    link(rel="stylesheet", href="/css/user/user_login.css")
+block content
+    .container
+        if user
+            input(type="text" value= user.fullname)

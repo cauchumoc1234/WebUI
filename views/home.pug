@@ -1,0 +1,36 @@
+extends general.pug
+block css
+  link(rel="stylesheet", href="/css/home.css")
+block content
+  .body
+    .row
+      .container
+        if shoes
+          h1(style="text-align:center;") New Shoes
+          .list
+            -  for(x = 0 ; x < 5 ; x++)
+                a.item(href="/product/shoes/"+shoes[x].id)
+                  img(src=shoes[x].avatar, alt='Product', style='width: 100%;')
+                  .info
+                    h4 #{shoes[x].productname}
+                    if shoes[x].type[1]
+                      p.type  #{shoes[x].type[1]}
+                    else
+                      p.type #{shoes[x].type[0]}
+                    span.price #{shoes[x].price}
+      .container
+        if clothes
+          h1(style="text-align:center;") New Clothes
+          .list
+            -  for(x = 0 ; x < 5 ; x++)
+                a.item(href="/product/clothes/"+clothes[x].id)
+                  img(src=clothes[x].avatar, alt='Product', style='width: 100%;')
+                  .info
+                    h4 #{clothes[x].productname}
+                    if clothes[x].type[1]
+                      p.type  #{clothes[x].type[1]}
+                    else
+                      p.type #{clothes[x].type[0]}
+                    span.price #{clothes[x].price}
+block script
+  script(src="/script/product/price_format2.js")
