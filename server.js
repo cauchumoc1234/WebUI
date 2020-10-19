@@ -47,7 +47,6 @@ app.get('/',async function(req, res) {
         }
         else return 1;
     })
-    res.render('home',{shoes:shoe,clothes:clothes,product:x})
-    
+    res.render('home',{shoes:shoe,clothes:clothes,product:x})    
 });
 app.use('/user', user_router);

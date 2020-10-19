@@ -54,6 +54,28 @@
     width: 100vw;
     height: 300px;
 }
+.product-filter
+{
+    display: flex;
+    padding-top: 150px;
+}
+
+.product-filter h1 
+{
+    flex-grow: 1;
+}
+
+.sort 
+{
+    display: flex;
+}
+
+.collection-sort 
+{
+    display: flex;
+    flex-direction: column;
+}
+
 #form-search{
     display: flex;
 }
