@@ -62,18 +62,23 @@
 
 .product-filter h1 
 {
-    flex-grow: 1;
+    flex: 30%;
+    padding-left: 20px ;
 }
 
 .sort 
 {
     display: flex;
+    flex: 70%;
+    padding-right: 70px;
+    justify-content: space-between;
 }
 
 .collection-sort 
 {
     display: flex;
     flex-direction: column;
+    
 }
 
 #form-search{
